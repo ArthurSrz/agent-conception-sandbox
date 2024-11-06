@@ -41,6 +41,7 @@ txt = st.text_area(
 
 if txt:
     st.success("Message envoyé à votre élu")
+    st.page_link("pages/7_Sherif_saloon.py", label = "Parapheur", icon = "📖")
     
 
 

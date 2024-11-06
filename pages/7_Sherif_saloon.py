@@ -33,16 +33,11 @@ st.markdown(
 """
 
 """
-st.markdown("### Je contacte mon élu")
-txt = st.text_area(
-    "",
-    "",
-)
 
-if txt:
-    st.success("Message envoyé à votre élu")
-    
+video_file = open("media/dircab_assistant_demo.mp4", "rb")
+video_bytes = video_file.read()
 
+st.video(video_bytes)
 
 
 

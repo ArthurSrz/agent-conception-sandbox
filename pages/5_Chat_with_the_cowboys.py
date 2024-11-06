@@ -33,6 +33,7 @@ st.markdown(
 #main variables
 
 
+
 #state variables
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -53,7 +54,7 @@ with col2:
                          si elle souhaite envoyer un message directement à l'elu élus de la Métropole en charge de 
                          la thématique à laquelle se requête est liée. Sa réponse est très courte, 2 phrases maximum.
                          Chaque réponse mentionne systématiquement le lien "Je contacte mon élu" ainsi qu'ils obtiendront une réponse sous 1 semaine.
-                         Le lien est le suivant : "https://agent-conception-sandbox.streamlit.app/Call_the_sherif_" """})
+                        """})
         messages.append({"role": "user", "content": prompt})
         #st.chat_message("user").write(prompt)
         if not openai_api_key:
@@ -65,6 +66,7 @@ with col2:
         with st.chat_message("assistant"):
             messages.append({"role": "assistant", "content": st.session_state["response"]})
             st.write(st.session_state["response"])
+        link = st.page_link("pages/6_Call_the_sherif.py", label = "**Je dialogue avec mes élus**", icon = "🗨️")
         
 
 
