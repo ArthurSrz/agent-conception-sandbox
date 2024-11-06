@@ -37,7 +37,7 @@ st.markdown(
 video_file = open("media/dircab_assistant_demo.mp4", "rb")
 video_bytes = video_file.read()
 
-st.video(video_bytes)
+st.video(video_bytes, autoplay =True)
 
 
 
