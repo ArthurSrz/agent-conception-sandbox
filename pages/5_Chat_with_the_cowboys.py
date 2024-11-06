@@ -30,6 +30,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+#main variables
+link = st.page_link("pages/6_Call_the_sherif.py.py", label="Page 1", icon="1️⃣")
+
 #state variables
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -38,8 +41,9 @@ if "response" not in st.session_state:
 
 messages = st.session_state.messages
 #layout 
-
 col1, col2, col3 = st.columns([1, 3, 1])
+
+
 with col2:
     prompt = st.text_input("","",placeholder="Qu'est-ce que la Métropole peut faire pour vous ?")
 
@@ -49,7 +53,7 @@ with col2:
                          si elle souhaite envoyer un message directement à l'elu élus de la Métropole en charge de 
                          la thématique à laquelle se requête est liée. Sa réponse est très courte, 2 phrases maximum.
                          Chaque réponse mentionne systématiquement le lien "Je contacte mon élu" ainsi qu'ils obtiendront une réponse sous 1 semaine.
-                         Le lien est le suivant : "https://google.fr" """})
+                         Le lien est le suivant : "https://agent-conception-sandbox.streamlit.app/Call_the_sherif_" """})
         messages.append({"role": "user", "content": prompt})
         #st.chat_message("user").write(prompt)
         if not openai_api_key:
