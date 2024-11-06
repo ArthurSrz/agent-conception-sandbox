@@ -31,7 +31,7 @@ st.markdown(
 )
 
 #main variables
-link = st.page_link("pages/6_Call_the_sherif.py.py", label="Page 1", icon="1️⃣")
+
 
 #state variables
 if "messages" not in st.session_state:
